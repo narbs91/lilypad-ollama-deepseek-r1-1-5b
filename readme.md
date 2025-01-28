@@ -26,6 +26,8 @@ docker tag lilypad-ollama-deepseek-r1-1-5b:latest <your-dockerhub-username>/lily
 docker push <your-dockerhub-username>/lilypad-ollama-deepseek-r1-1-5b:latest
 ```
 
+5. Create a tag on your GitHUb repo by creating a release, take note of the release title
+
 ## Usage
 
 Test locally with Docker:
@@ -36,5 +38,5 @@ docker run lilypad-ollama-deepseek-r1-1-5b:latest "Tell me about black holes"
 Run on the Lilypad Network using the following command:
 
 ```bash
-lilypad run narbs91/lilypad-ollama-deepseek-r1-1-5b:latest --web3-private-key <your-private-key> --prompt "What is bitcoin?"
+lilypad run narbs91/lilypad-ollama-deepseek-r1-1-5b:latest:<your-github-tag-here> --web3-private-key <your-private-key> --prompt "What is bitcoin?"
 ```
