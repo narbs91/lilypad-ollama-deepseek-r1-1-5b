@@ -20,6 +20,11 @@ EXPOSE 11434
 # Set the environment variable for the ollama host
 ENV OLLAMA_HOST=0.0.0.0
 
+RUN mkdir -p /outputs
+RUN chmod 777 /outputs
+# Set outputs directory as a volume
+VOLUME /app/outputs
+
 # Copy a script to start ollama and handle input
 COPY run_deepseek.sh /app/run_deepseek.sh
 RUN chmod +x /app/run_deepseek.sh
