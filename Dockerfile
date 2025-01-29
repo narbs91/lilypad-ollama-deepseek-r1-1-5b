@@ -21,7 +21,7 @@ EXPOSE 11434
 ENV OLLAMA_HOST=0.0.0.0
 
 # Create a single outputs directory and set permissions
-RUN mkdir -p /app/outputs && chmod 777 /app/outputs
+RUN mkdir -p /outputs && chmod 777 /outputs
 
 # Set outputs directory as a volume
 VOLUME /app/outputs
