@@ -20,8 +20,9 @@ EXPOSE 11434
 # Set the environment variable for the ollama host
 ENV OLLAMA_HOST=0.0.0.0
 
-RUN mkdir -p /outputs
-RUN chmod 777 /outputs
+# Create a single outputs directory and set permissions
+RUN mkdir -p /app/outputs && chmod 777 /app/outputs
+
 # Set outputs directory as a volume
 VOLUME /app/outputs
 

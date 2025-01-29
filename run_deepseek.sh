@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Create output directory if it doesn't exist
-mkdir -p outputs
+# Create output directory if it doesn't exist (using absolute path)
+mkdir -p /app/outputs
 
 # Start the ollama server in the background.
 nohup bash -c "ollama serve &" >&2
@@ -38,10 +38,10 @@ json_output="{
 
 echo "$json_output"
 
-# Write JSON to file
-echo "$json_output" > "outputs/response.json"
+# Write JSON to file using absolute path
+echo "$json_output" > "/app/outputs/response.json"
 
 # Print confirmation message
-echo "Response saved to outputs/response.json"
+echo "Response saved to /app/outputs/response.json"
 
 exit 0
