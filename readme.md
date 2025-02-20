@@ -38,5 +38,6 @@ docker run lilypad-ollama-deepseek-r1-1-5b:latest "Tell me about black holes"
 Run on the Lilypad Network using the following command:
 
 ```bash
-lilypad run narbs91/lilypad-ollama-deepseek-r1-1-5b:latest:<your-github-tag-here> --web3-private-key <your-private-key> --prompt "What is bitcoin?"
+lilypad run narbs91/lilypad-ollama-deepseek-r1-1-5b:latest:v1.0.6 --web3-private-key <your-private-key> --Prompt "What is bitcoin?"
 ```
+Note: if you have WEB3_PRIVATE_KEY set as an env variable on your machine you can exclude the `--web3-private-key` flag
